@@ -17,3 +17,5 @@ runtime.goexit
 
 Error2: something not found⏎
 ```
+
+[stack overflow](https://stackoverflow.com/questions/70851429/golang-pkg-errors-how-to-print-custom-wrapped-errors)
