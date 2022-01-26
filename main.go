@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-
 	stderrors "errors"
+
 	"github.com/pkg/errors"
 )
 
@@ -30,6 +30,10 @@ func exitf(format string, args ...interface{}) {
 }
 
 type errNotFound struct{ error }
+
+func (e errNotFound) Error() string {
+    return fmt.Sprintf("%+v", e.error)
+}
 
 func ErrNotFound(err error) error {
 	if err == nil || IsErrNotFound(err) {
